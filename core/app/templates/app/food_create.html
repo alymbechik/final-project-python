@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+<body>
+{% block content %}
+    <h2 class="col-12 text-center tm-section-title" style="padding: 30px;">Добавить блюдо</h2>
+    <form action="." method="post" enctype="multipart/form-data" style="max-width: 60vw;margin: 0 auto;">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" name="title" class="form-control" placeholder="Название" required="" />
+        </div>
+
+        <div class="form-group">
+            <input type="number" name="price" class="form-control" placeholder="Цена" required="" />
+        </div>
+
+        <select class="select" name="category" required>
+            <option disabled>Категория</option>
+            <option value="Пицца">Пицца</option>
+            <option value="Салат">Салат</option>
+            <option value="Лапша">Лапша</option>
+        </select><br><br>
+
+        <div class="form-group">
+            <input type="file" name="img" class="form-control" placeholder="Картинка" required="" />
+        </div>
+
+        <div class="form-group">
+            <textarea rows="5" name="description" class="form-control" placeholder="Описание" required=""></textarea>
+        </div>
+
+        <div class="form-group tm-d-flex">
+			<button type="submit" class="tm-btn tm-btn-success" style="align-self: center;">
+				Отправить
+            </button>
+        </div>
+    </form>
+{% endblock %}
+</body>
+</html>

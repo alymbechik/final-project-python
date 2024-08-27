@@ -1,0 +1,122 @@
+.btn007{
+	padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #2F956D;
+    background-color: transparent;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    border: 2px solid #2F956D;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    &:hover{
+    	background-color: #2F956D;
+    	color: white;
+    }
+}
+figcaption a{
+	text-decoration: none;
+}
+.box {
+	display: flex;
+	gap: 50px;
+	align-items: center;
+	padding: 40px 20px 20px;
+}
+.content h2, p{
+	margin-bottom: 10px;
+}
+.select {
+    display: block;
+    max-width: 215px;
+    width: 100%;
+    position: relative;
+    color: #626364;
+}
+
+.new-select {
+    position: relative;
+    border-bottom: 1px solid #ced4da;
+    padding: 10px 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.new-select__list {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    user-select: none;
+}
+
+.new-select__list.on {
+    display: block;
+}
+
+.new-select__item span {
+    display: block;
+    padding: 10px 15px;
+}
+
+.new-select__item span:hover {
+    color: #12b223;
+}
+
+.new-select:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    background: url('path-to-image') no-repeat right center / cover;
+    opacity: 0.6;
+
+    -webkit-transition: all .27s ease-in-out;
+        -o-transition: all .27s ease-in-out;
+            transition: all .27s ease-in-out;
+
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.new-select.on:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+.tm-social-link{
+	margin-right: 10px;
+
+	&:hover {
+	    background-color: skyblue;
+	}
+}
+main {
+    position: relative;
+    z-index: 9999;
+    background-color: white;
+    height: auto;
+}
+.tm-welcome-section {
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.tm-gallery-description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
